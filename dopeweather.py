@@ -5,9 +5,8 @@
 #Version 2
 import requests
 import json
+import config
 
-# Enter your API key here
-api_key = "19e591d87e7c406e17b46b8f0d9c6e1d"
 
 # base_url variable to store url
 base_url = "http://api.openweathermap.org/data/2.5/weather?"
@@ -16,7 +15,7 @@ base_url = "http://api.openweathermap.org/data/2.5/weather?"
 zip_code = input("Enter zip code : ")
 
 # complete url address
-complete_url = base_url + "appid=" + api_key + "&zip=" + zip_code
+complete_url = base_url + "appid=" + config.api_key + "&zip=" + zip_code
 
 # get method of requests module
 # return response object
